@@ -12,5 +12,5 @@ RUN mv environment.properties config/dev
 RUN mv logback.xml config/dev
 RUN mv ehcache.xml config/dev
 
-ENV SERVERS "java -classpath groupmanager-api-0.1.10-SNAPSHOT-jar-with-dependencies.jar com.pearson.grid.escrow.Main dev"
+ENV SERVERS "java -classpath groupmanager-api-0.1.10-SNAPSHOT-jar-with-dependencies.jar com.pearson.grid.groupmanager.Main dev"
 CMD sh -c "eval $SERVERS"
