@@ -7,6 +7,8 @@ RUN curl -O http://wolfbuild.prsn.us/view/Build/job/build-group-manager/ws/group
 RUN curl -O http://wolfbuild.prsn.us/view/Build/job/build-group-manager/ws/groupmanager-api/config/stg/ehcache.xml
 RUN curl -O http://wolfbuild.prsn.us/view/Build/job/build-group-manager/ws/groupmanager-api/config/stg/logback.xml
 
+RUN sed -i 's/10.199.14.134/graphite-ose.grid-services.openshift.pd-cloud.com/' environment.properties
+
 RUN mkdir -p config/stg
 RUN mv environment.properties config/stg
 RUN mv logback.xml config/stg
